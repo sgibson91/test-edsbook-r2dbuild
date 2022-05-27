@@ -1,6 +1,7 @@
 name: Build environment with repo2docker
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
