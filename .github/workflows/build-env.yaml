@@ -1,0 +1,16 @@
+name: Build environment with repo2docker
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-env:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build environment
+        uses: jupyterhub/repo2docker-action@master
+        with:
+          NO_PUSH: "true"
